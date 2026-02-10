@@ -6,7 +6,7 @@ class Produto(models.Model):
     nome = models.CharField(max_length=100)
     categoria = models.CharField(max_length=50)
     quantidade = models.IntegerField()
-    preco = models.DecimalField(decimal_places=2, max_digits=5)
+    preco = models.DecimalField(decimal_places=2, max_digits=7)
     cadastrado_por = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.PROTECT)
 
     def __str__(self):
